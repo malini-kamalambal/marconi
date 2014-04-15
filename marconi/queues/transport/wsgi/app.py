@@ -36,4 +36,6 @@ from marconi.queues import bootstrap
 conf = cfg.CONF
 conf(project='marconi', prog='marconi-queues', args=[])
 
-app = bootstrap.Bootstrap(conf).transport.app
+
+def app():
+    return bootstrap.Bootstrap(conf).transport.app

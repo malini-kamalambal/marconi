@@ -76,7 +76,7 @@ class FunctionalTestBase(testing.TestBase):
 
             self.client = http.Client()
         else:
-            self.client = http.WSGIClient(app.app)
+            self.client = http.WSGIClient(app.app())
 
         self.headers = helpers.create_marconi_headers(self.cfg)
 
